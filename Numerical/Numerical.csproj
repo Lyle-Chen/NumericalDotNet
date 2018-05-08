@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Algebra\Abstract\ARingElmt.cs" />
     <Compile Include="Common\Algebra\Interface\AlgebraicStructures.cs" />
-    <Compile Include="Common\Algebra\Real.cs" />
+    <Compile Include="Common\Algebra\Abstract\AFieldElmt.cs" />
+    <Compile Include="Common\Algebra\Numerical\NComplex.cs" />
+    <Compile Include="Common\Algebra\Numerical\NInteger.cs" />
+    <Compile Include="Common\Algebra\Numerical\NReal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\Algebra\Abstract\" />
+    <Folder Include="Interpolation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

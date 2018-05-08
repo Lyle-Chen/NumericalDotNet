@@ -82,9 +82,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Numerical\Numerical.csproj">
+    <ProjectReference Include="..\Numerical\Calc.csproj">
       <Project>{4ca66097-6da9-4552-b371-c2f713b0fa59}</Project>
-      <Name>Numerical</Name>
+      <Name>Calc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,10 +1,9 @@
 ﻿using System;
-using Numerical.Common.Algebra.Abstract;
-using Numerical.Common.Algebra.Interface;
+using Calc.Common.Algebra.Structure.Field;
 
-namespace Numerical.Common.Algebra.Numerical
+namespace Calc.Numerical.DataTypes
 {
-    public sealed class NReal : AFieldElmt
+    public sealed class NReal : AFieldElement
     {
         public static int Precision = 6;
 
@@ -39,22 +38,22 @@ namespace Numerical.Common.Algebra.Numerical
 
         #region Operational methods
 
-        public override IFieldElmt Plus(IFieldElmt oprd)
+        public override IFieldElement Plus(IFieldElement oprd)
         {
             return new NReal(Val + ((NReal) oprd).Val);
         }
 
-        public override IFieldElmt Neg()
+        public override IFieldElement Neg()
         {
             return new NReal(-Val);
         }
 
-        public override IFieldElmt Times(IFieldElmt oprd)
+        public override IFieldElement Times(IFieldElement oprd)
         {
             return new NReal(Val*((NReal) oprd).Val);
         }
 
-        public override IFieldElmt Recp()
+        public override IFieldElement Recp()
         {
             return new NReal(1.0/Val);
         }

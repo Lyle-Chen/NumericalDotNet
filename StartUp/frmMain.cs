@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using Numerical.Common.Algebra.Numerical;
+using Calc.Numerical.DataTypes;
 
 namespace StartUp
 {

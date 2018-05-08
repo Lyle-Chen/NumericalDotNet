@@ -1,10 +1,9 @@
 ﻿using System;
-using Numerical.Common.Algebra.Abstract;
-using Numerical.Common.Algebra.Interface;
+using Calc.Common.Algebra.Structure.Ring;
 
-namespace Numerical.Common.Algebra.Numerical
+namespace Calc.Numerical.DataTypes
 {
-    public sealed class NInteger : ACommutativeRingElmt
+    public sealed class NInteger : ACommutativeRingElement
     {
         public static NInteger O = new NInteger {Val = 0};
         public static NInteger I = new NInteger {Val = 1};
@@ -32,17 +31,17 @@ namespace Numerical.Common.Algebra.Numerical
 
         #region Operrational Methods
 
-        public override ICommutativeRingElmt Plus(ICommutativeRingElmt oprd)
+        public override ICommutativeRingElement Plus(ICommutativeRingElement oprd)
         {
             return new NInteger(Val + ((NInteger) oprd).Val);
         }
 
-        public override ICommutativeRingElmt Neg()
+        public override ICommutativeRingElement Neg()
         {
             return new NInteger(-Val);
         }
 
-        public override ICommutativeRingElmt Times(ICommutativeRingElmt oprd)
+        public override ICommutativeRingElement Times(ICommutativeRingElement oprd)
         {
             return new NInteger(Val*((NInteger) oprd).Val);
         }

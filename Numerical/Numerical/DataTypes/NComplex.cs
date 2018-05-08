@@ -1,10 +1,9 @@
 ﻿using System;
-using Numerical.Common.Algebra.Abstract;
-using Numerical.Common.Algebra.Interface;
+using Calc.Common.Algebra.Structure.Field;
 
-namespace Numerical.Common.Algebra.Numerical
+namespace Calc.Numerical.DataTypes
 {
-    public sealed class NComplex : AFieldElmt
+    public sealed class NComplex : AFieldElement
     {
         public static int Precision = 6;
 
@@ -46,17 +45,17 @@ namespace Numerical.Common.Algebra.Numerical
 
         #region Operational methods
 
-        public override IFieldElmt Plus(IFieldElmt oprd)
+        public override IFieldElement Plus(IFieldElement oprd)
         {
             return new NComplex(Re + ((NComplex) oprd).Re, Im + ((NComplex) oprd).Im);
         }
 
-        public override IFieldElmt Neg()
+        public override IFieldElement Neg()
         {
             return new NComplex(-Re, -Im);
         }
 
-        public override IFieldElmt Times(IFieldElmt oprd)
+        public override IFieldElement Times(IFieldElement oprd)
         {
             var r1 = Re;
             var r2 = ((NComplex) oprd).Re;
@@ -66,7 +65,7 @@ namespace Numerical.Common.Algebra.Numerical
             return new NComplex(r1*r2 - i1*i2, r1*i2 + r2*i1);
         }
 
-        public override IFieldElmt Recp()
+        public override IFieldElement Recp()
         {
             var s = Re*Re + Im*Im;
             return new NComplex(Re/s, -Im/s);

@@ -5,10 +5,6 @@
     /// </summary>
     public interface IIntegralDomainElement : ICommutativeRingElement
     {
-        IIntegralDomainElement Plus(IIntegralDomainElement oprd);
-
-        new IIntegralDomainElement Neg();
-
-        IIntegralDomainElement Times(IIntegralDomainElement oprd);
+        
     }
 }

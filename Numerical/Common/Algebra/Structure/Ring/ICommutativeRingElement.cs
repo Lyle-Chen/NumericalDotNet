@@ -5,10 +5,6 @@
     /// </summary>
     public interface ICommutativeRingElement : IRingElement
     {
-        ICommutativeRingElement Plus(ICommutativeRingElement oprd);
-
-        new ICommutativeRingElement Neg();
-
-        ICommutativeRingElement Times(ICommutativeRingElement oprd);
+        
     }
 }

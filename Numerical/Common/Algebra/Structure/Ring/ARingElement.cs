@@ -14,7 +14,7 @@
 
         public static ARingElement operator -(ARingElement left, ARingElement right)
         {
-            return (ARingElement) right.Neg().Plus(left);
+            return (ARingElement) ((ARingElement) right.Neg()).Plus(left);
         }
 
         public static ARingElement operator *(ARingElement left, ARingElement right)
@@ -26,11 +26,11 @@
 
         #region Operational methods
 
-        public abstract IRingElement Plus(IRingElement oprd);
+        public abstract IAlgebraicElement Plus(IAlgebraicElement oprd);
 
-        public abstract IRingElement Neg();
+        public abstract IAlgebraicElement Neg();
 
-        public abstract IRingElement Times(IRingElement oprd);
+        public abstract IAlgebraicElement Times(IAlgebraicElement oprd);
 
         #endregion
     }

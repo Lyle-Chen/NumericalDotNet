@@ -34,10 +34,10 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(8, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(704, 380);
+            this.label1.Size = new System.Drawing.Size(688, 364);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(704, 380);
             this.Controls.Add(this.label1);
             this.Name = "FrmMain";
+            this.Padding = new System.Windows.Forms.Padding(8);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numerical";
             this.ResumeLayout(false);

@@ -5,6 +5,6 @@
     /// </summary>
     public interface IMagmaElement : IAlgebraicElement
     {
-        IMagmaElement Opt(IMagmaElement oprd);
+        IAlgebraicElement Opt(IAlgebraicElement oprd);
     }
 }

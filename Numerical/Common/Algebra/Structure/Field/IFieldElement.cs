@@ -7,12 +7,6 @@ namespace Calc.Common.Algebra.Structure.Field
     /// </summary>
     public interface IFieldElement : ICommutativeRingElement
     {
-        IFieldElement Plus(IFieldElement oprd);
-
-        new IFieldElement Neg();
-
-        IFieldElement Times(IFieldElement oprd);
-
-        IFieldElement Recp();
+        IAlgebraicElement Recp();
     }
 }

@@ -5,6 +5,6 @@
     /// </summary>
     public interface ISemigroupElement : IMagmaElement
     {
-        ISemigroupElement Opt(ISemigroupElement oprd);
+        
     }
 }

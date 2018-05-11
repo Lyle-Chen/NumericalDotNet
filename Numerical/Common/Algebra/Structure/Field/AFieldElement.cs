@@ -16,7 +16,7 @@ namespace Calc.Common.Algebra.Structure.Field
 
         public static AFieldElement operator -(AFieldElement left, AFieldElement right)
         {
-            return (AFieldElement)right.Neg().Plus(left);
+            return (AFieldElement) ((AFieldElement) right.Neg()).Plus(left);
         }
 
         public static AFieldElement operator *(AFieldElement left, AFieldElement right)
@@ -26,50 +26,20 @@ namespace Calc.Common.Algebra.Structure.Field
 
         public static AFieldElement operator /(AFieldElement left, AFieldElement right)
         {
-            return (AFieldElement)right.Recp().Times(left);
+            return (AFieldElement) ((AFieldElement) right.Recp()).Times(left);
         }
 
         #endregion
 
         #region Operational methods
 
-        IRingElement IRingElement.Plus(IRingElement oprd)
-        {
-            return Plus(oprd as IFieldElement);
-        }
+        public abstract IAlgebraicElement Plus(IAlgebraicElement oprd);
 
-        ICommutativeRingElement ICommutativeRingElement.Plus(ICommutativeRingElement oprd)
-        {
-            return Plus(oprd as IFieldElement);
-        }
+        public abstract IAlgebraicElement Neg();
 
-        public abstract IFieldElement Plus(IFieldElement oprd);
+        public abstract IAlgebraicElement Times(IAlgebraicElement oprd);
 
-        IRingElement IRingElement.Neg()
-        {
-            return Neg();
-        }
-
-        ICommutativeRingElement ICommutativeRingElement.Neg()
-        {
-            return Neg();
-        }
-
-        public abstract IFieldElement Neg();
-
-        IRingElement IRingElement.Times(IRingElement oprd)
-        {
-            return Times(oprd as IFieldElement);
-        }
-
-        ICommutativeRingElement ICommutativeRingElement.Times(ICommutativeRingElement oprd)
-        {
-            return Times(oprd as IFieldElement);
-        }
-
-        public abstract IFieldElement Times(IFieldElement oprd);
-
-        public abstract IFieldElement Recp();
+        public abstract IAlgebraicElement Recp();
 
         #endregion
     }

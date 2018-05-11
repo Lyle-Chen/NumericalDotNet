@@ -5,6 +5,6 @@
     /// </summary>
     public interface IMonoidElement : ISemigroupElement
     {
-        IMonoidElement Opt(IMonoidElement oprd);
+        
     }
 }

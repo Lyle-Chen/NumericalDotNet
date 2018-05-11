@@ -1,9 +1,12 @@
 ﻿using System;
+using Calc.Common.Algebra.Relation.Equivalent;
+using Calc.Common.Algebra.Relation.Ordered;
+using Calc.Common.Algebra.Structure;
 using Calc.Common.Algebra.Structure.Ring;
 
 namespace Calc.Numerical.DataTypes
 {
-    public sealed class NInteger : ACommutativeRingElement
+    public sealed class NInteger : ICommutativeRingElement, IEqualable, IOrderable
     {
         public static NInteger O = new NInteger {Val = 0};
         public static NInteger I = new NInteger {Val = 1};
@@ -19,7 +22,7 @@ namespace Calc.Numerical.DataTypes
 
         public static NInteger operator -(NInteger left, NInteger right)
         {
-            return (NInteger) right.Neg().Plus(left);
+            return (NInteger) ((NInteger) right.Neg()).Plus(left);
         }
 
         public static NInteger operator *(NInteger left, NInteger right)
@@ -27,23 +30,80 @@ namespace Calc.Numerical.DataTypes
             return (NInteger) left.Times(right);
         }
 
+        public static bool operator ==(NInteger left, NInteger right)
+        {
+            // ReSharper disable once PossibleNullReferenceException
+            return left.EquivalentTo(right);
+        }
+
+        public static bool operator !=(NInteger left, NInteger right)
+        {
+            return !(left == right);
+        }
+
+        public static bool operator <(NInteger left, NInteger right)
+        {
+            return left.LessThan(right);
+        }
+
+        public static bool operator >(NInteger left, NInteger right)
+        {
+            return right.LessThan(left);
+        }
+
+        public static bool operator <=(NInteger left, NInteger right)
+        {
+            return left < right || left == right;
+        }
+
+        public static bool operator >=(NInteger left, NInteger right)
+        {
+            return left > right || left == right;
+        }
+
         #endregion
 
         #region Operrational Methods
 
-        public override ICommutativeRingElement Plus(ICommutativeRingElement oprd)
+        public IAlgebraicElement Plus(IAlgebraicElement oprd)
         {
             return new NInteger(Val + ((NInteger) oprd).Val);
         }
 
-        public override ICommutativeRingElement Neg()
+        public IAlgebraicElement Neg()
         {
             return new NInteger(-Val);
         }
 
-        public override ICommutativeRingElement Times(ICommutativeRingElement oprd)
+        public IAlgebraicElement Times(IAlgebraicElement oprd)
         {
             return new NInteger(Val*((NInteger) oprd).Val);
+        }
+
+        #endregion
+
+        #region Relations
+
+        public bool EquivalentTo(IAlgebraicElement oprd)
+        {
+            return Val == ((NInteger) oprd).Val;
+        }
+
+        public bool LessThan(IAlgebraicElement oprd)
+        {
+            return Val < ((NInteger)oprd).Val;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj is NInteger && Val == ((NInteger) obj).Val;
+        }
+
+        public override int GetHashCode()
+        {
+            return Val.GetHashCode();
         }
 
         #endregion
@@ -65,14 +125,14 @@ namespace Calc.Numerical.DataTypes
             return new NInteger(val);
         }
 
-        public static implicit operator Int64(NInteger i)
+        public static implicit operator Int64(NInteger ni)
         {
-            return i.Val;
+            return ni.Val;
         }
 
-        public static implicit operator NReal(NInteger i)
+        public static implicit operator NReal(NInteger ni)
         {
-            return new NReal(i.Val);
+            return new NReal(ni.Val);
         }
 
         public override string ToString()
@@ -81,5 +141,6 @@ namespace Calc.Numerical.DataTypes
         }
 
         #endregion
+
     }
 }

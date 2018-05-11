@@ -5,8 +5,6 @@
     /// </summary>
     public interface IAbelianGroupElement : IGroupElement
     {
-        IAbelianGroupElement Opt(IAbelianGroupElement oprd);
-
-        new IAbelianGroupElement Inv();
+        
     }
 }

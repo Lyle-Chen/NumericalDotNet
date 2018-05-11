@@ -5,10 +5,10 @@
     /// </summary>
     public interface IRingElement : IAlgebraicElement
     {
-        IRingElement Plus(IRingElement oprd);
+        IAlgebraicElement Plus(IAlgebraicElement oprd);
 
-        IRingElement Neg();
+        IAlgebraicElement Neg();
 
-        IRingElement Times(IRingElement oprd);
+        IAlgebraicElement Times(IAlgebraicElement oprd);
     }
 }

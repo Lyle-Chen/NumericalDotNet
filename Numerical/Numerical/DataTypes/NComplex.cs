@@ -1,14 +1,16 @@
 ﻿using System;
+using Calc.Common.Algebra.Relation.Equivalent;
+using Calc.Common.Algebra.Structure;
 using Calc.Common.Algebra.Structure.Field;
 
 namespace Calc.Numerical.DataTypes
 {
-    public sealed class NComplex : AFieldElement
+    public sealed class NComplex : IFieldElement, IEqualable
     {
         public static int Precision = 6;
 
-        public static NComplex O = new NComplex(0.0);
-        public static NComplex I = new NComplex(1.0);
+        public static NComplex O = NReal.O;
+        public static NComplex I = NReal.I;
         public static NComplex J = new NComplex(0.0, 1.0);
 
         public NReal Re { get; set; }
@@ -23,7 +25,7 @@ namespace Calc.Numerical.DataTypes
 
         public static NComplex operator -(NComplex left, NComplex right)
         {
-            return (NComplex) right.Neg().Plus(left);
+            return (NComplex) ((NComplex) right.Neg()).Plus(left);
         }
 
         public static NComplex operator *(NComplex left, NComplex right)
@@ -33,7 +35,7 @@ namespace Calc.Numerical.DataTypes
 
         public static NComplex operator /(NComplex left, NComplex right)
         {
-            return (NComplex)right.Recp().Times(left);
+            return (NComplex) ((NComplex) right.Recp()).Times(left);
         }
 
         public static NComplex operator ~(NComplex oprd)
@@ -41,21 +43,32 @@ namespace Calc.Numerical.DataTypes
             return new NComplex(oprd.Re, -oprd.Im);
         }
 
+        public static bool operator ==(NComplex left, NComplex right)
+        {
+            // ReSharper disable once PossibleNullReferenceException
+            return left.EquivalentTo(right);
+        }
+
+        public static bool operator !=(NComplex left, NComplex right)
+        {
+            return !(left == right);
+        }
+
         #endregion
 
         #region Operational methods
 
-        public override IFieldElement Plus(IFieldElement oprd)
+        public IAlgebraicElement Plus(IAlgebraicElement oprd)
         {
             return new NComplex(Re + ((NComplex) oprd).Re, Im + ((NComplex) oprd).Im);
         }
 
-        public override IFieldElement Neg()
+        public IAlgebraicElement Neg()
         {
             return new NComplex(-Re, -Im);
         }
 
-        public override IFieldElement Times(IFieldElement oprd)
+        public IAlgebraicElement Times(IAlgebraicElement oprd)
         {
             var r1 = Re;
             var r2 = ((NComplex) oprd).Re;
@@ -65,10 +78,34 @@ namespace Calc.Numerical.DataTypes
             return new NComplex(r1*r2 - i1*i2, r1*i2 + r2*i1);
         }
 
-        public override IFieldElement Recp()
+        public IAlgebraicElement Recp()
         {
             var s = Re*Re + Im*Im;
             return new NComplex(Re/s, -Im/s);
+        }
+
+        #endregion
+
+        #region Relations
+
+        public bool EquivalentTo(IAlgebraicElement oprd)
+        {
+            return Re == ((NComplex) oprd).Re && Im == ((NComplex) oprd).Im;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj is NComplex && Re == ((NComplex) obj).Re && Im == ((NComplex) obj).Im;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((Re != null ? Re.GetHashCode() : 0)*397) ^ (Im != null ? Im.GetHashCode() : 0);
+            }
         }
 
         #endregion
@@ -81,12 +118,12 @@ namespace Calc.Numerical.DataTypes
             Im = im;
         }
 
-        public NComplex(NReal re) : this(re, 0.0)
+        public NComplex(NReal re) : this(re, NReal.O)
         {
 
         }
 
-        public NComplex() : this(0.0)
+        public NComplex() : this(NReal.O)
         {
 
         }
@@ -113,5 +150,6 @@ namespace Calc.Numerical.DataTypes
         }
 
         #endregion
+
     }
 }

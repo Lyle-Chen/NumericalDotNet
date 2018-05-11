@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Algebra\Relation\Equivalent\IEqualable.cs" />
+    <Compile Include="Common\Algebra\Relation\IRelational.cs" />
+    <Compile Include="Common\Algebra\Relation\IReflexive.cs" />
+    <Compile Include="Common\Algebra\Relation\ISymmetric.cs" />
+    <Compile Include="Common\Algebra\Relation\ITransitive.cs" />
+    <Compile Include="Common\Algebra\Relation\Ordered\IOrderable.cs" />
     <Compile Include="Common\Algebra\Structure\Field\AFieldElement.cs" />
     <Compile Include="Common\Algebra\Structure\Field\IFieldElement.cs" />
     <Compile Include="Common\Algebra\Structure\Group\IAbelianGroupElement.cs" />
@@ -60,9 +66,7 @@
     <Compile Include="Numerical\DataTypes\NReal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\Algebra\Relation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

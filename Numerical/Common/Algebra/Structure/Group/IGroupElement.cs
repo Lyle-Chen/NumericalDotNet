@@ -5,8 +5,6 @@
     /// </summary>
     public interface IGroupElement : IMonoidElement
     {
-        IGroupElement Opt(IGroupElement oprd);
-
-        IGroupElement Inv();
+        IAlgebraicElement Inv();
     }
 }

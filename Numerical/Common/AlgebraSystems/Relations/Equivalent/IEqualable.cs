@@ -1,6 +1,6 @@
-﻿using Calc.Common.Algebra.Structure;
+﻿using Calc.Common.AlgebraSystems.Structures;
 
-namespace Calc.Common.Algebra.Relation.Equivalent
+namespace Calc.Common.AlgebraSystems.Relations.Equivalent
 {
     public interface IEqualable : IAlgebraicElement
     {

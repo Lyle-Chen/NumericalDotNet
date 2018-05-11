@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.Algebra.Structure
+﻿namespace Calc.Common.AlgebraSystems.Structures
 {
     /// <summary>
     /// Algebra: Set with binary opts.

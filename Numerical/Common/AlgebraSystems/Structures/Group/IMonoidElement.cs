@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.Algebra.Structure.Group
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group
 {
     /// <summary>
     /// Monoid: Semigroup with an Identity (both left and right).

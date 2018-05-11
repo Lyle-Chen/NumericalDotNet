@@ -1,6 +1,4 @@
-﻿using Calc.Common.Algebra.Structure.Ring;
-
-namespace Calc.Common.Algebra.Structure.Field
+﻿namespace Calc.Common.AlgebraSystems.Structures.Field
 {
     /// <summary>
     /// Abstract Field Element with operators "+", "-", "*" and "/".

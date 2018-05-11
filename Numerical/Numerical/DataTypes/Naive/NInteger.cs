@@ -1,10 +1,10 @@
 ﻿using System;
-using Calc.Common.Algebra.Relation.Equivalent;
-using Calc.Common.Algebra.Relation.Ordered;
-using Calc.Common.Algebra.Structure;
-using Calc.Common.Algebra.Structure.Ring;
+using Calc.Common.AlgebraSystems.Relations.Equivalent;
+using Calc.Common.AlgebraSystems.Relations.Ordered;
+using Calc.Common.AlgebraSystems.Structures;
+using Calc.Common.AlgebraSystems.Structures.Ring;
 
-namespace Calc.Numerical.DataTypes
+namespace Calc.Numerical.DataTypes.Naive
 {
     public sealed class NInteger : ICommutativeRingElement, IEqualable, IOrderable
     {

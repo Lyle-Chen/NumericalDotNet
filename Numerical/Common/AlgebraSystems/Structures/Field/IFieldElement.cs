@@ -1,6 +1,6 @@
-﻿using Calc.Common.Algebra.Structure.Ring;
+﻿using Calc.Common.AlgebraSystems.Structures.Ring;
 
-namespace Calc.Common.Algebra.Structure.Field
+namespace Calc.Common.AlgebraSystems.Structures.Field
 {
     /// <summary>
     /// Field: Commutative Ring which also constitutes an Abelian Group with its opt Times (so that Recp() exists).

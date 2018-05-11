@@ -1,6 +1,6 @@
-﻿using Calc.Common.Algebra.Structure;
+﻿using Calc.Common.AlgebraSystems.Structures;
 
-namespace Calc.Common.Algebra.Relation
+namespace Calc.Common.AlgebraSystems.Relations
 {
     public interface IRelational : IAlgebraicElement
     {

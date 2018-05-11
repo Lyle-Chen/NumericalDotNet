@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.Algebra.Structure.Group
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group
 {
     /// <summary>
     /// Magma: Algebra with a closed Opt.

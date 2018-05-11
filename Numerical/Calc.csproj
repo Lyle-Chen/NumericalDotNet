@@ -42,28 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Algebra\Relation\Equivalent\IEqualable.cs" />
-    <Compile Include="Common\Algebra\Relation\IRelational.cs" />
-    <Compile Include="Common\Algebra\Relation\IReflexive.cs" />
-    <Compile Include="Common\Algebra\Relation\ISymmetric.cs" />
-    <Compile Include="Common\Algebra\Relation\ITransitive.cs" />
-    <Compile Include="Common\Algebra\Relation\Ordered\IOrderable.cs" />
-    <Compile Include="Common\Algebra\Structure\Field\AFieldElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Field\IFieldElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Group\IAbelianGroupElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Group\IGroupElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Group\IMagmaElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Group\IMonoidElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Group\ISemigroupElement.cs" />
-    <Compile Include="Common\Algebra\Structure\IAlgebraicElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Ring\ACommutativeRingElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Ring\ARingElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Ring\ICommutativeRingElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Ring\IIntegralDomainElement.cs" />
-    <Compile Include="Common\Algebra\Structure\Ring\IRingElement.cs" />
-    <Compile Include="Numerical\DataTypes\NComplex.cs" />
-    <Compile Include="Numerical\DataTypes\NInteger.cs" />
-    <Compile Include="Numerical\DataTypes\NReal.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\Equivalent\IEqualable.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\IRelational.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\IReflexive.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\ISymmetric.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\ITransitive.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\Ordered\IOrderable.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Field\AFieldElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Field\IFieldElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\IAbelianGroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\IGroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\IMagmaElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\IMonoidElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\ISemigroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\IAlgebraicElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Ring\ACommutativeRingElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Ring\ARingElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Ring\ICommutativeRingElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Ring\IIntegralDomainElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Ring\IRingElement.cs" />
+    <Compile Include="Numerical\DataTypes\Naive\NComplex.cs" />
+    <Compile Include="Numerical\DataTypes\Naive\NInteger.cs" />
+    <Compile Include="Numerical\DataTypes\Naive\NReal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

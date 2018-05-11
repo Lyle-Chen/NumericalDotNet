@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.Algebra.Relation
+﻿namespace Calc.Common.AlgebraSystems.Relations
 {
     public interface IReflexive : IRelational
     {

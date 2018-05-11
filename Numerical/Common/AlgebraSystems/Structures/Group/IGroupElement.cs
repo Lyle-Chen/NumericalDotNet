@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.Algebra.Structure.Group
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group
 {
     /// <summary>
     /// Group: Monoid that every element has its invertibility.

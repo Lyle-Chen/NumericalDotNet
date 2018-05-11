@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.Algebra.Structure.Group
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group
 {
     /// <summary>
     /// Abelian Group: Group who's Opt is also commutative.

@@ -42,31 +42,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\AlgebraSystems\Relations\Equivalent\IEqualable.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\Instance\IEquivalent.cs" />
     <Compile Include="Common\AlgebraSystems\Relations\IRelational.cs" />
     <Compile Include="Common\AlgebraSystems\Relations\IReflexive.cs" />
     <Compile Include="Common\AlgebraSystems\Relations\ISymmetric.cs" />
     <Compile Include="Common\AlgebraSystems\Relations\ITransitive.cs" />
-    <Compile Include="Common\AlgebraSystems\Relations\Ordered\IOrderable.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\Field\AFieldElement.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\Field\IFieldElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Relations\Instance\IOrderable.cs" />
+    <Compile Include="Common\AlgebraSystems\Spaces\IInnerProducted.cs" />
+    <Compile Include="Common\AlgebraSystems\Spaces\IMetric.cs" />
+    <Compile Include="Common\AlgebraSystems\Spaces\ILinear.cs" />
+    <Compile Include="Common\AlgebraSystems\Spaces\INormed.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Additive\IAbelianGroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Additive\IGroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Additive\IMagmaElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Additive\IMonoidElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Additive\ISemigroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Field\AFieldElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Field\IFieldElement.cs" />
     <Compile Include="Common\AlgebraSystems\Structures\Group\IAbelianGroupElement.cs" />
     <Compile Include="Common\AlgebraSystems\Structures\Group\IGroupElement.cs" />
     <Compile Include="Common\AlgebraSystems\Structures\Group\IMagmaElement.cs" />
     <Compile Include="Common\AlgebraSystems\Structures\Group\IMonoidElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Multiplicative\IAbelianGroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Multiplicative\IGroupElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Multiplicative\IMagmaElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Multiplicative\IMonoidElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Multiplicative\ISemigroupElement.cs" />
     <Compile Include="Common\AlgebraSystems\Structures\Group\ISemigroupElement.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\IAlgebraicElement.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\Ring\ACommutativeRingElement.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\Ring\ARingElement.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\Ring\ICommutativeRingElement.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\Ring\IIntegralDomainElement.cs" />
-    <Compile Include="Common\AlgebraSystems\Structures\Ring\IRingElement.cs" />
+    <Compile Include="Common\AlgebraSystems\IAlgebraicElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Ring\ACommutativeRingElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Ring\ARingElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Ring\ICommutativeRingElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Ring\IIntegralDomainElement.cs" />
+    <Compile Include="Common\AlgebraSystems\Structures\Group\Instance\Ring\IRingElement.cs" />
     <Compile Include="Numerical\DataTypes\Naive\NComplex.cs" />
     <Compile Include="Numerical\DataTypes\Naive\NInteger.cs" />
     <Compile Include="Numerical\DataTypes\Naive\NReal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Numerical\DataTypes\HighPrecision\" />
+    <Folder Include="Numerical\DataTypes\Structured\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

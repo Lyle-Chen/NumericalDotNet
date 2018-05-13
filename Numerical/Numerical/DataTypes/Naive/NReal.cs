@@ -1,12 +1,11 @@
 ﻿using System;
-using Calc.Common.AlgebraSystems.Relations.Equivalent;
-using Calc.Common.AlgebraSystems.Relations.Ordered;
-using Calc.Common.AlgebraSystems.Structures;
-using Calc.Common.AlgebraSystems.Structures.Field;
+using Calc.Common.AlgebraSystems;
+using Calc.Common.AlgebraSystems.Relations.Instance;
+using Calc.Common.AlgebraSystems.Structures.Group.Instance.Field;
 
 namespace Calc.Numerical.DataTypes.Naive
 {
-    public sealed class NReal : IFieldElement, IEqualable, IOrderable
+    public sealed class NReal : IFieldElement, IEquivalent, IOrderable
     {
         public static int Precision = 6;
 

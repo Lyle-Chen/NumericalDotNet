@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Field
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Field
 {
     /// <summary>
     /// Abstract Field Element with operators "+", "-", "*" and "/".

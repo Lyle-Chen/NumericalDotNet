@@ -1,12 +1,11 @@
 ﻿using System;
-using Calc.Common.AlgebraSystems.Relations.Equivalent;
-using Calc.Common.AlgebraSystems.Relations.Ordered;
-using Calc.Common.AlgebraSystems.Structures;
-using Calc.Common.AlgebraSystems.Structures.Ring;
+using Calc.Common.AlgebraSystems;
+using Calc.Common.AlgebraSystems.Relations.Instance;
+using Calc.Common.AlgebraSystems.Structures.Group.Instance.Ring;
 
 namespace Calc.Numerical.DataTypes.Naive
 {
-    public sealed class NInteger : ICommutativeRingElement, IEqualable, IOrderable
+    public sealed class NInteger : ICommutativeRingElement, IEquivalent, IOrderable
     {
         public static NInteger O = new NInteger {Val = 0};
         public static NInteger I = new NInteger {Val = 1};

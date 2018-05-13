@@ -1,11 +1,11 @@
 ﻿using System;
-using Calc.Common.AlgebraSystems.Relations.Equivalent;
-using Calc.Common.AlgebraSystems.Structures;
-using Calc.Common.AlgebraSystems.Structures.Field;
+using Calc.Common.AlgebraSystems;
+using Calc.Common.AlgebraSystems.Relations.Instance;
+using Calc.Common.AlgebraSystems.Structures.Group.Instance.Field;
 
 namespace Calc.Numerical.DataTypes.Naive
 {
-    public sealed class NComplex : IFieldElement, IEqualable
+    public sealed class NComplex : IFieldElement, IEquivalent
     {
         public static int Precision = 6;
 

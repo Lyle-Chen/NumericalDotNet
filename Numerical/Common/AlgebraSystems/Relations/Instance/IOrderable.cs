@@ -1,6 +1,4 @@
-﻿using Calc.Common.AlgebraSystems.Structures;
-
-namespace Calc.Common.AlgebraSystems.Relations.Ordered
+﻿namespace Calc.Common.AlgebraSystems.Relations.Instance
 {
     public interface IOrderable : IAlgebraicElement
     {

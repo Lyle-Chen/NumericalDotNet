@@ -3,13 +3,13 @@
 namespace Calc.Common.AlgebraSystems.Spaces
 {
     /// <summary>
-    /// Normed Space: A set with a function F: Vn |-> R,
+    /// Normed Space: A set with a function ||*||: V |-> R,
     /// where: 
-    /// 1) F(Vn) >= 0, F(0) = 0;
-    /// 2) F(c*Vn) = |C|*F(Vn);
-    /// 3) F(V1) + F(V2) >= F(V1, V2)).
+    /// 1) ||x|| >= 0, ||0|| = 0;
+    /// 2) ||kx|| = |k|*||x|;
+    /// 3) ||x|| + ||y|| >= ||x + y||.
     /// </summary>
-    public interface INormed : IAlgebraicElement
+    public interface INormed : ILinear
     {
         Double Norm();
     }

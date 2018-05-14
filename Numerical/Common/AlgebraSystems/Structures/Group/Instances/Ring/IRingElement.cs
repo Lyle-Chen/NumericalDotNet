@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Ring
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Ring
 {
     /// <summary>
     /// Ring: Algebra which constitutes an Abelian Group with its opt Plus (so that Neg() exists), and a Monoid with its opt Times.

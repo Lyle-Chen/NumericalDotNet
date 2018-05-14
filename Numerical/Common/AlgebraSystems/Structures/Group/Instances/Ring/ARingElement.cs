@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Ring
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Ring
 {
     /// <summary>
     /// Abstract Ring Element with operators "+", "-", and "*".

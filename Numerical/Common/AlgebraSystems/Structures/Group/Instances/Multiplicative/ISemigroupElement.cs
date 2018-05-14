@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Multiplicative
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Multiplicative
 {
     /// <summary>
     /// Multiplicative Semigroup: Multiplicative Magma who's Times is also associative.

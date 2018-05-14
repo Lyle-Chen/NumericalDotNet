@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Multiplicative
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Multiplicative
 {
     /// <summary>
     /// Multiplicative Monoid: Multiplicative Semigroup with One (both left and right).

@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Additive
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Additive
 {
     /// <summary>
     /// Additive Magma: Algebra with a closed operator Plus.

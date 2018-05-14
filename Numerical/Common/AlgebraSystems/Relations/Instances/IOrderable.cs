@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Relations.Instance
+﻿namespace Calc.Common.AlgebraSystems.Relations.Instances
 {
     public interface IOrderable : IAlgebraicElement
     {

@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Field
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Field
 {
     /// <summary>
     /// Field: Commutative Ring which also constitutes an Abelian Group with its opt Times (so that Recp() exists).

@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Multiplicative
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Multiplicative
 {
     /// <summary>
     /// Multiplicative Magma: Algebra with a closed operator Times.

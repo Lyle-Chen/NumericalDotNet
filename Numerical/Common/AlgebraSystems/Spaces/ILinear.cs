@@ -1,4 +1,5 @@
-﻿using Calc.Common.AlgebraSystems.Structures.Group.Instance.Field;
+﻿using Calc.Common.AlgebraSystems.Structures.Group.Instances.Additive;
+using Calc.Common.AlgebraSystems.Structures.Group.Instances.Field;
 
 namespace Calc.Common.AlgebraSystems.Spaces
 {
@@ -10,7 +11,7 @@ namespace Calc.Common.AlgebraSystems.Spaces
     /// 3) (k + l)x = kx + lx;
     /// 4) k(x + y) = kx + ky.
     /// </summary>
-    public interface ILinear : Structures.Group.Instance.Additive.IAbelianGroupElement
+    public interface ILinear : IAbelianGroupElement
     {
         IAlgebraicElement ScalarTimes(IFieldElement k);
     }

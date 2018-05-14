@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Multiplicative
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Multiplicative
 {
     /// <summary>
     /// Multiplicative Group: Multiplicative Monoid that every element (except Zero) has its invertibility Recp.

@@ -1,4 +1,4 @@
-﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instance.Ring
+﻿namespace Calc.Common.AlgebraSystems.Structures.Group.Instances.Ring
 {
     /// <summary>
     /// Communative Ring: Ring who's opt Times is commutative (NOT meaning that Times is invertable).

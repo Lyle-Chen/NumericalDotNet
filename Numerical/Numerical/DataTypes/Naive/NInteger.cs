@@ -1,7 +1,7 @@
 ﻿using System;
 using Calc.Common.AlgebraSystems;
-using Calc.Common.AlgebraSystems.Relations.Instance;
-using Calc.Common.AlgebraSystems.Structures.Group.Instance.Ring;
+using Calc.Common.AlgebraSystems.Relations.Instances;
+using Calc.Common.AlgebraSystems.Structures.Group.Instances.Ring;
 
 namespace Calc.Numerical.DataTypes.Naive
 {

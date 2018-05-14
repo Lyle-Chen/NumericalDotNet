@@ -1,4 +1,4 @@
-﻿using Calc.Common.AlgebraSystems.Structures.Group.Instance.Field;
+﻿using Calc.Common.AlgebraSystems.Structures.Group.Instances.Field;
 
 namespace Calc.Common.AlgebraSystems.Spaces
 {
